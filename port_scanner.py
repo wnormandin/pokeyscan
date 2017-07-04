@@ -181,10 +181,10 @@ if __name__ == '__main__':
             if count % 10 == 0:
                 cprint(' -  Waiting on {} workers'.format(result._number_left), Color.BLUE, True)
             time.sleep(args.timeout)
-        cprint('[*] Workers spawned', Color.MSG)
+        cprint('[*] Workers spawned', Color.GREEN, True)
         pool.close()
         pool.join()
-        cprint('[*] Workers joined', Color.MSG)
+        cprint('[*] Workers joined', Color.GREEN, True)
         cprint('--------------------------------------------')
         presenter(result.get())
     except KeyboardInterrupt:
