@@ -41,8 +41,6 @@ import sys
 
 VERSION = '0.1a'
 RELEASE = 'Development'
-GLOBAL_LOCK = Lock()
-g_lock = False
 this = sys.modules[__name__]
 
 def cli():
@@ -94,14 +92,6 @@ class Color:
 
 def worker(port):
 
-    def toggle_lock():
-        if not g_lock:
-            g_lock = True
-            GLOBAL_LOCK.acquire()
-        elif g_lock:
-            g_lock = False
-            GLOBAL_LOCK.release()
-
     def probe():
         s.connect((args.ip, port))
         try:
@@ -130,9 +120,7 @@ def worker(port):
     except KeyboardInterrupt:
         cprint(' -  Interrupt in sub ({})'.format(os.getpid()), Color.BLUE, True)
         return False, None
-    except:
-        raise
-
+    
 
 def presenter(result):
     for r in sorted(_uniq(result)):
