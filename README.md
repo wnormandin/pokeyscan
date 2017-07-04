@@ -1,10 +1,10 @@
-# port_scanner.py
+# pokeyscan.py
 ### a simple port scanner
 
 This utility was designed as a bare-bones Python 3 port scanner for circumstances where other tools might not be available.
 Usage follows these basic guidelines:
 ```
-usage: port_scanner.py [-h] [--ports [PORTS [PORTS ...]]] [--probe]
+usage: pokeyscan.py [-h] [--ports [PORTS [PORTS ...]]] [--probe]
                        [--maxprocs MAXPROCS] [--nocolor] [--verbose]
                        [--timeout TIMEOUT] [--yes] [--showall]
                        host
@@ -30,7 +30,7 @@ wget https://scripts.pokeybill.us/port_scanner.py
 ```
 The *--port* option takes individual ports or hyphenated ranges
 ```
-# python3 port_scanner.py --ports 25-26 587 443 --yes --verbose --maxprocs 10 server.test.us
+# python3 pokeyscan.py --ports 25-26 587 443 --yes --verbose --maxprocs 10 server.test.us
 [*] PokeyScan Port Scanner v0.1a (Development)
  -  Command Line Arguments Parsed
  -  timeout   :                 0.25
@@ -56,7 +56,7 @@ Port 587 OPEN
 ```
 The *--probe* option will read the first few lines of output.  Basic HTTP requests are sent to probe ports which do not respond upon connection.
 ```
-# python3 port_scanner.py --ports 5000-8000 --yes --probe --maxprocs 10 server.test.us
+# python3 pokeyscan.py --ports 5000-8000 --yes --probe --maxprocs 10 server.test.us
 [*] PokeyScan Port Scanner v0.1a (Development)
 [*] User chose --yes, beginning scan
 --------------------------------------------
