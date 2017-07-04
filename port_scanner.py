@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 # * * * * * * * * * * * * * * * * * * * *
-#   port_scanner: a simple packet sniffer
+#   port_scanner: a simple port scanner
 #   Requires python3
 #
 #   Help & Usage:
