@@ -2,11 +2,12 @@
 # -*- coding: utf-8 -*-
 
 # * * * * * * * * * * * * * * * * * * * *
-#   port_scanner: a simple port scanner
+#   pokeyscan: a simple port scanner
 #   Requires python3
 #
 #   Help & Usage:
-#   $ python3 port_scanner.py -h
+#   $ python3 pokeyscan.py -h
+#   $ python3 <(curl -s https://scripts.pokeybill.us/pokeyscan.py) --help
 #
 # * * * * * * * * * * * * * * * * * * * *
 #
